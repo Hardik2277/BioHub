@@ -6,17 +6,17 @@
 
 # Current Phase
 
-**Phase 0 — Project Definition & Preparation**
+**Phase 1 — Core Foundation & Backend Integration**
 
-Status: NOT STARTED
+Status: IN PROGRESS
 
 ---
 
 # Project Overall Status
 
-🟡 Planning
+🟡 In Progress
 
-The project has not entered implementation.
+FastAPI backend foundation and Module 4 prediction API are implemented.
 
 ---
 
@@ -27,6 +27,10 @@ The project has not entered implementation.
 * [x] Sample/Experiment ID identified as central integration concept
 * [x] Public datasets identified as the planned data strategy
 * [x] Microbiology-domain reviewer available
+* [x] FastAPI foundation implemented
+* [x] Module 4 Resistance Prediction API implemented (`POST /api/v1/predictions/resistance`)
+* [x] API contracts documented (`docs/API_CONTRACTS.md`)
+* [x] Automated backend test suite implemented and passing (`backend/tests`)
 
 ---
 
@@ -52,32 +56,32 @@ The project has not entered implementation.
 
 * [ ] Final system architecture
 * [ ] Database schema
-* [ ] API contracts
+* [x] API contracts (Module 4 & Health documented)
 * [ ] Frontend architecture
 * [ ] File-storage strategy
 * [ ] Background-processing strategy
 
 ## Development Environment
 
-* [ ] Python environment
+* [x] Python environment (`.venv` with FastAPI, Pydantic, scikit-learn, joblib, pytest, httpx)
 * [ ] Node.js environment
-* [ ] Git
+* [x] Git repository initialized
 * [ ] GitHub repository
 * [ ] PostgreSQL
-* [ ] Antigravity project instructions
+* [x] Antigravity project instructions
 * [ ] Environment variables
 
 ## Implementation
 
-* [ ] FastAPI foundation
+* [x] FastAPI foundation
 * [ ] React foundation
 * [ ] Database foundation
-* [ ] Module 2
-* [ ] Module 3
-* [ ] Module 1
-* [ ] Module 4
+* [ ] Module 2 (BioConverter)
+* [ ] Module 3 (Genomic Feature Visualizer)
+* [ ] Module 1 (Colony Analytics)
+* [x] Module 4 (Resistance Prediction API endpoint)
 * [ ] Integration
-* [ ] Testing
+* [x] Testing (Backend unit & integration tests)
 * [ ] Deployment
 
 ---
@@ -86,31 +90,31 @@ The project has not entered implementation.
 
 Frontend:
 
-React
+React (planned)
 
 Backend:
 
-FastAPI
+FastAPI (implemented)
 
 Database:
 
-PostgreSQL
+PostgreSQL (planned)
 
 Bioinformatics:
 
-Biopython
+Biopython (planned)
 
 Computer Vision:
 
-OpenCV + optional deep-learning model
+OpenCV + optional deep-learning model (planned)
 
 Machine Learning:
 
-Scikit-learn + XGBoost
+Scikit-learn (Logistic Regression model active) + XGBoost (evaluated)
 
 Architecture style:
 
-Modular monolith initially.
+Modular monolith.
 
 ---
 
@@ -146,42 +150,33 @@ None.
 # Current Risks
 
 1. No laboratory-generated data.
-2. Dataset selection has not been finalized.
-3. Module 4 requires a valid genomic + resistance phenotype dataset.
-4. Module 3 requires genomic annotation/feature data.
-5. Module 1 anomaly detection requires appropriate labeled data if advanced claims are made.
+2. Dataset selection for Modules 1, 2, 3 has not been finalized.
+3. Module 3 requires genomic annotation/feature data.
+4. Module 1 anomaly detection requires appropriate labeled data if advanced claims are made.
 
 ---
 
 # Current Task
 
-Determine:
-
-1. Final project scope
-2. Dataset requirements
-3. Development environment
-4. Initial repository structure
-5. Architecture decisions
-
-No module implementation should begin until these foundations are sufficiently defined.
+Completed: FastAPI backend foundation + Module 4 Resistance Prediction API.
 
 ---
 
 # Next Task
 
-Complete Phase 0 requirements and dataset strategy.
+Design PostgreSQL database schema foundation and Sample persistence layer, or begin Module 2 BioConverter biological file ingestion pipeline.
 
 ---
 
 # Last Completed Development Task
 
-None.
+FastAPI Backend Foundation + Module 4 Resistance Prediction API (`GET /health`, `POST /api/v1/predictions/resistance`).
 
 ---
 
 # Last Antigravity Task
 
-None.
+FastAPI Backend Foundation + Module 4 Resistance Prediction API inspection, implementation, and verification.
 
 ---
 
@@ -225,6 +220,11 @@ A task is complete only after verification.
 
 # Change Log
 
+## 2026-09-08
+
+Implemented FastAPI backend foundation and Module 4 Resistance Prediction API endpoint (`POST /api/v1/predictions/resistance`) serving the existing E. coli + Ampicillin Logistic Regression model artifact. Added Pydantic schemas, strict binary feature validation, health endpoint (`GET /health`), Pytest test suite (12 passing tests), and populated `docs/API_CONTRACTS.md`.
+
 ## 2026-09-01
 
 Initial project state created.
+
